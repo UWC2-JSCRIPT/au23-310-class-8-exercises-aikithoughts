@@ -3,6 +3,19 @@ const BASE_URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 
 const url = `${BASE_URL}?q=tech&api-key=${API_KEY}`;
 
+// const asyncFetch = async function () {
+//   try {
+//     const data = await fetch(url);
+//     const dataJson = data.json
+//     console.log('async await function', dataJson)
+//   } catch(e) {
+//     console.log(e);
+//   }
+// }
+
+// asyncFetch();
+
+
 fetch(url)
   .then(function(data) {
     return data.json();
